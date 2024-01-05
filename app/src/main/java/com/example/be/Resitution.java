@@ -74,7 +74,7 @@ public class Resitution extends AppCompatActivity /*implements RestituAdapter.on
                 .add("email", ed1.getText().toString())
                 .add("password", ed2.getText().toString())
                 .build();*/
-        layout.setVisibility(View.INVISIBLE);
+        layout.setVisibility(View.VISIBLE);
 
         c.getText();
         JsonPlaceHolderApi jsonPlaceHolderApi =  retrofit.create(JsonPlaceHolderApi.class);

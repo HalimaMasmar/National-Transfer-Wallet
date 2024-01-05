@@ -19,26 +19,26 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="80dp"
-            android:src="@drawable/be"/>
+            android:src="@drawable/logo"/>
         <EditText
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:hint="FirstName" />
+            android:hint="Nom" />
 
     <EditText
         android:id="@+id/editText5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:hint="LastName" />
+        android:hint="Prenom" />
 
         <EditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Card Number" />
+            android:hint="Numero de Carte" />
 
 
 
@@ -46,7 +46,7 @@
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone Number" />
+        android:hint="Numero de " />
 
 
     <LinearLayout

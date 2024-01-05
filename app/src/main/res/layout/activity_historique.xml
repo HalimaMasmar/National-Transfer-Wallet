@@ -18,8 +18,8 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="40dp"
-        android:queryHint="Search Here"
-        android:title="Search"
+        android:queryHint="Rechercher Ici "
+        android:title="Recherche"
 
 
         tools:ignore="MissingConstraints" ></SearchView>
@@ -51,7 +51,7 @@
                 android:fontFamily="@font/fontres"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="NAME"
+                android:text="Nom"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
