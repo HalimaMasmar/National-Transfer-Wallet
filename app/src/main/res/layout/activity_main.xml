@@ -20,19 +20,25 @@
 
         <ImageView
             android:fontFamily="@font/fontres"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="40dp"
-            android:src="@drawable/be"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="45dp"
+            android:src="@drawable/logo"
 
-            android:textColor="@color/greyafrica"
+            android:textColor="@color/purple_200"
 
             ></ImageView>
         <com.google.android.material.textfield.TextInputLayout
             app:boxBackgroundMode="none"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:hintEnabled="false">
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/blue"
+
+            >
+
+
+
 
             <EditText
                 android:fontFamily="@font/fontres"
@@ -42,10 +48,10 @@
                 android:layout_margin="10dp"
                 android:padding="15dp"
                 android:background="@drawable/shapeemail"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawableRight="@drawable/ic_baseline_person_24"
                 android:drawablePadding="10dp"
-                android:hint="Email"
-                android:textColor="@color/greyafrica"
+                android:hint="Nom d'utilisateur"
+                android:textColor="@color/black"
                 android:textColorHint="@color/greyafrica"
                 android:textColorHighlight="@color/greyafrica"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -67,7 +73,7 @@
                 android:background="@drawable/shapeemail"
                 android:drawableLeft="@drawable/ic_baseline_lock_24"
                 android:drawablePadding="10dp"
-                android:hint="Password"
+                android:hint="Mot de Passe"
                 android:inputType="textPassword"
                 app:passwordToggleEnabled="true"
                 android:textColor="@color/greyafrica"
@@ -90,13 +96,13 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="0dp"
 
-                android:textColor="@color/greyafrica"
+                android:textColor="@color/black"
                 android:buttonTint="@color/greyafrica"
                 android:checked="true"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Forget Password"
+                android:text="Mot de Passe oublié"
                 android:fontFamily="@font/fontres"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
@@ -114,7 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button"
-            android:text="Log In"
+            android:text="Se connecter"
             android:shadowColor="@android:color/transparent"
             android:padding="15dp"
             android:layout_marginRight="10dp"
@@ -129,7 +135,7 @@
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cancel"
+            android:text="Quitter"
             android:shadowColor="@color/tealafrica"
             android:padding="15dp"
             android:layout_marginRight="10dp"
