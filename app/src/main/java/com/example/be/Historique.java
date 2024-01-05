@@ -51,7 +51,7 @@ public class Historique extends AppCompatActivity {
         recycler_view = findViewById(R.id.recycler_view);
         searchView= findViewById(R.id.action_search);
         Retrofit retrofit= new Retrofit.Builder()
-                .baseUrl("https://client-microserv.herokuapp.com/api_client/MultiTransfers/")
+                .baseUrl("http://localhost:9000/MultiTransfers/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

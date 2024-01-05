@@ -125,7 +125,7 @@ public class Homes extends AppCompatActivity {
 
         });
         Retrofit retrofit= new Retrofit.Builder()
-                .baseUrl("https://client-microserv.herokuapp.com/api_client/")
+                .baseUrl("http://localhost:9000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
