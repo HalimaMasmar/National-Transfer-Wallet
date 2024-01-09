@@ -70,8 +70,12 @@ public class Homes extends AppCompatActivity {
                 builder.setIcon(android.R.drawable.ic_dialog_alert);
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        //Toast.makeText(getApplicationContext(), "Session in", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Session in", Toast.LENGTH_SHORT).show();
                         finish();
+                        Intent main = new Intent(Homes.this, MainActivity.class);
+                        startActivity(main);
+
+
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -125,7 +129,7 @@ public class Homes extends AppCompatActivity {
 
         });
         Retrofit retrofit= new Retrofit.Builder()
-                .baseUrl("http://localhost:9000/")
+                .baseUrl("http://100.89.160.207:9000/api_client/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -146,7 +150,8 @@ public class Homes extends AppCompatActivity {
                 Client client = response.body();
 
                 String content="";
-                title.setText(client.getTitle());
+
+                title.setText(client.getTitle() + " " + client.getFirstName() + " " + client.getLastName());
                     ln.setText(client.getLastName());
                 idcard.setText(client.getIdCard());
                 phone.setText(client.getPhoneNumber());

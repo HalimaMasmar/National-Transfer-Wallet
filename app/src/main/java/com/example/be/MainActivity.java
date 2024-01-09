@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
         ed2 = (EditText)findViewById(R.id.editText2);
         b2 = (Button)findViewById(R.id.button2);
         Retrofit retrofit= new Retrofit.Builder()
-                .baseUrl("http://localhost:9000/api_client/login")
+
+                .baseUrl("http://100.89.160.207:9000/api_client/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RequestBody form = new FormBody.Builder()
@@ -96,32 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Call<List<AuthenticationTokenDTO>> call = jsonPlaceHolderApi.getToken();
-        /*call.enqueue(new Callback<List<AuthenticationTokenDTO>>() {
-            @Override
-            public void onResponse(Call<List<AuthenticationTokenDTO>> call, Response<List<AuthenticationTokenDTO>> response) {
-               if(!response.isSuccessful()){
-                Toast.makeText(getApplicationContext(),
-                        "KHDM MOK...",Toast.LENGTH_SHORT).show();
-                return;
-               }
-               List<AuthenticationTokenDTO> posts = response.body();
-               for(AuthenticationTokenDTO post:posts){
-                   String content="";
-                   content+="ID" +post.getId()+"\n";
-                   content+="Token"+post.getToken();
-                   Intent home = new Intent(MainActivity.this, Homes.class);
-                   Log.i("ddddddddddddddddddddd1","mok");
-                   startActivity(home);
 
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<AuthenticationTokenDTO>> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),
-                        "Redirecting...",Toast.LENGTH_SHORT).show();
-
-        });*/
         //tx1 = (TextView)findViewById(R.id.textView3);
         // tx1.setVisibility(View.GONE);
 
@@ -168,78 +144,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-               /* Log.d("MainActivity","this btn was clicked")
-                val retrofit = Retrofit.Builder()
-                        .baseUrl("http://10.0.2.2")
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build()
-                val appService = retrofit.create(AppService::class.java)
-                appService.getAppData().enqueue(object :Callback<List<App>>{
-                    override fun onResponse(call: Call<List<App>>, response: Response<List<App>>) {
-                        val list = response.body()
-                        if(list !=null){
-                            for (app in list){
-                                Log.d("MainActivity","id is ${app.id}")
-                                Log.d("MainActivity","name is ${app.name}")
-                                Log.d("MainActivity","version is ${app.version}")
-                            }
-                        }
-                    }
-
-                    override fun onFailure(call: Call<List<App>>, t: Throwable) {
-                        t.printStackTrace()
-                    }
-                })
-*/
-                /*
-
-                RequestBody form = new FormBody.Builder()
-                        .add("email", ed1.getText().toString())
-                        .add("password", ed2.getText().toString())
-                        .build();
-                RequestBody formBody = new RequestBody.create(form,JSON);
-                Request request = new Request.Builder()
-                        .url("http://192.168.236.239:9000/api_client/login")
-                        .post(formBody)
-                        .addHeader("Content-Type", "application/json")
-                        .addHeader("Accept", "application/json")
-                        .build();
 
 
-                Call call = client.newCall(request);
-                call.enqueue(new Callback() {
-                    @Override
-                    public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                        e.printStackTrace();
-                        Log.i("ddddddddddddddddddddd","mok");
-                    }
 
-                    @Override
-                    public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                        if(response.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),
-                                    "Redirecting...",Toast.LENGTH_SHORT).show();
 
-                        }
-                    }
-                });
-
-*/
-                //if(ed1.getText().toString().equals("admin") &&
-                // ed2.getText().toString().equals("admin")) {
-                // }else{
-                //     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
-
-                //            tx1.setVisibility(View.VISIBLE);
-                //    tx1.setBackgroundColor(Color.RED);
-                //    counter--;
-                //   tx1.setText(Integer.toString(counter));
-
-                //if (counter == 0) {
-                //b1.setEnabled(false);
-                //}
             }
-            //}
+
         });
 
         b2.setOnClickListener(new View.OnClickListener() {

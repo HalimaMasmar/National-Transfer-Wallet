@@ -67,7 +67,7 @@ public class Resitution extends AppCompatActivity /*implements RestituAdapter.on
         montant=findViewById(R.id.price);
 
         Retrofit retrofit= new Retrofit.Builder()
-                .baseUrl("http://localhost:9000/")
+                .baseUrl("http://100.89.160.207:9000/api_client/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
        /* RequestBody form = new FormBody.Builder()

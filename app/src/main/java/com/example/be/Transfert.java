@@ -108,7 +108,7 @@ public class Transfert extends AppCompatActivity {
 
         motif=findViewById(R.id.motif4);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://localhost:9000/")
+                .baseUrl("http://100.89.160.207:9000/api_client/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
        /* RequestBody form = new FormBody.Builder()
@@ -343,7 +343,7 @@ public class Transfert extends AppCompatActivity {
 
                                         if (!response.isSuccessful()) {
                                             Toast.makeText(getApplicationContext(),
-                                                    "Transfer has been done.", Toast.LENGTH_SHORT).show();
+                                                    "Le virement a été effectué avec succès.", Toast.LENGTH_SHORT).show();
 
 
                                             return;
@@ -351,7 +351,7 @@ public class Transfert extends AppCompatActivity {
 
 
                                         Toast.makeText(getApplicationContext(),
-                                                "Transfer has been done.", Toast.LENGTH_SHORT).show();
+                                                "Le virement a été effectué avec succès.", Toast.LENGTH_SHORT).show();
 
 
                                     }
@@ -403,19 +403,6 @@ public class Transfert extends AppCompatActivity {
         dialog.show();
     }
     private void addNotification() {
-        /*NotificationCompat.Builder builder =
-                new NotificationCompat.Builder(getApplicationContext(), "My notif")
-                        .setSmallIcon(R.drawable.ic_baseline_email_24) //set icon for notification
-                        .setContentTitle("Notifications Example") //set title of notification
-                        .setContentText("This is a notification message")
-                        .setOngoing(true)
-                        //this is notification message
-                        .setAutoCancel(true); // makes auto cancel of notification
-        Log.e("plof","pepe");
-        //.setPriority(NotificationCompat.PRIORITY_DEFAULT); //set priority of notification
-
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Transfert.this);
-        managerCompat.notify(1, builder.build());*/
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
@@ -451,113 +438,6 @@ public class Transfert extends AppCompatActivity {
 
 
 
-
-                //spinner.setBackgroundColor(000);
-                //spinner.getBackground().setColorFilter(getResources().getColor(android.R.color.black), PorterDuff.Mode.SRC_ATOP);
-                //spinner.setAdapter(adapter);
-                // spinner.setOnItemSelectedListener(String:onOptionsItemSelected());
-
-
-            /*
-
-            private void buildDialog() {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                View view = getLayoutInflater().inflate(R.layout.dialogue, null);
-                EditText name = view.findViewById(R.id.Tname);
-                builder.setView(view);
-                builder.setTitle("Enter name").setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        addCard(name.getText().toString());
-                    }
-                }).setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-            }
-        }
-    private void addCard(String name) {
-        View view =getLayoutInflater().inflate(R.layout.card,null);
-        TextView nameView=view.findViewById(R.id.Sname);
-        Button delete =view.findViewById(R.id.Bname);
-        nameView.setText(name);
-        delete.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                layout.removeView(view);
-            }
-        });
-        layout.addView(view);
-    }*/
-  /*  ArrayList<SpinnerModel> getList() {
-
-
-        arrayList =  new ArrayList<>();
-
-        arrayList.add(new SpinnerModel("1","Mickey"));
-        arrayList.add(new SpinnerModel("2","Lamia"));
-        arrayList.add(new SpinnerModel("3","Mona"));
-        arrayList.add(new SpinnerModel("4","Mona"));
-        arrayList.add(new SpinnerModel("5","Mona"));
-
-        Log.i("pay", String.valueOf(arrayList));
-        return arrayList;
-
-
-
-    }*/
-
-/*
-    private List<BenefModel> getList3( ) {
-
-        arrayList2 =  new ArrayList<>();
-
-        arrayList2.add(new BenefModel("1","Mickey"));
-        arrayList2.add(new BenefModel("2","Lamia"));
-        arrayList2.add(new BenefModel("3","Mona"));
-        arrayList2.add(new BenefModel("4","Mona"));
-        arrayList2.add(new BenefModel("5","Mona"));
-
-        Log.i("pay", String.valueOf(arrayList2));
-        return arrayList2;
-
-
-
-    }
-    ArrayList<BenefModel> getList2() {
-
-        arrayList3 =  new ArrayList<>();
-
-        arrayList3.add(new BenefModel("id","Nom du beneficiaire"));
-
-
-        Log.i("pay", String.valueOf(arrayList2));
-        return arrayList3;
-
-
-
-    }
-    private void setRecyclerView() {
-
-        recycler_view.setHasFixedSize(true);
-        recycler_view.setLayoutManager(new LinearLayoutManager(this));
-        /*if(arrayList2.isEmpty()){
-            adapter2=new BenefAdapter(this.getList2());
-        }else{*/
-        //Log.i("dddDATA2", String.valueOf(arrayList));
-     /*   Log.i("dddDATA2", String.valueOf(getList3().get(this.a)));
-        Log.i("dddDATA2", String.valueOf(this.getList3()));
-        adapter2 = new BenefAdapter(arrayList);
-        recycler_view.setAdapter(adapter2);
-        /* View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_historique, container, false);
-         recycler_view = view.findViewById(R.id.recycler_view1);
-         recycler_view.setLayoutManager(new LinearLayoutManager(this.getContext()));
-         recycler_view.setAdapter(new PaymentAdapter(getList()));*/
-
- /*   }
-*/
 
 
 

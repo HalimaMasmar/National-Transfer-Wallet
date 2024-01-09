@@ -51,7 +51,7 @@ public class Historique extends AppCompatActivity {
         recycler_view = findViewById(R.id.recycler_view);
         searchView= findViewById(R.id.action_search);
         Retrofit retrofit= new Retrofit.Builder()
-                .baseUrl("http://localhost:9000/MultiTransfers/")
+                .baseUrl("http://100.89.160.207:9000/api_client//MultiTransfers/client/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
